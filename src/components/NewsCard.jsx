@@ -1,6 +1,7 @@
 import React from "react";
 import { FaStar, FaRegEye, FaShareAlt } from "react-icons/fa";
 import { MdBookmarkBorder } from "react-icons/md";
+import { Link } from "react-router";
 
 const NewsCard = ({ news }) => {
   // ✅ Extract nested author object properly
@@ -37,8 +38,8 @@ const NewsCard = ({ news }) => {
         </div>
 
         <div className=" btn-sm flex gap-6">
-          <MdBookmarkBorder size={20}  className="cursor-pointer"/>
-          <FaShareAlt  size={20} className="cursor-pointer"/>
+          <MdBookmarkBorder size={20} className="cursor-pointer" />
+          <FaShareAlt size={20} className="cursor-pointer" />
         </div>
       </div>
 
@@ -60,12 +61,12 @@ const NewsCard = ({ news }) => {
             : description}
         </p>
 
-        <a
-          href="#"
+        <Link
+          to={`/newsDetails/${news.id}`}
           className="text-orange-500 font-semibold text-sm mt-2 inline-block"
         >
           Read More
-        </a>
+        </Link>
 
         {/* Footer */}
         <div className="flex items-center justify-between mt-3">
