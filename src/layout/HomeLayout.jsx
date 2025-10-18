@@ -22,15 +22,14 @@ const HomeLayout = () => {
         </header>
 
         <main className="w-11/12 mx-auto py-3  grid md:grid-cols-12 grid-cols-1 md:gap-3">
-          <aside className=" md:col-span-3">
+          <aside className=" md:col-span-3 md:sticky md:top-0 h-fit">
             <LeftAside />
           </aside>
           <section className=" col-span-6 ">
             <Outlet></Outlet>
           </section>
-          <aside className=" col-span-3 space-y-5">
+          <aside className=" col-span-3 space-y-5  md:sticky md:top-0 h-fit">
             <RightAside />
-            
           </aside>
         </main>
       </div>
